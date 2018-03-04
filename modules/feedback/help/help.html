@@ -1,0 +1,137 @@
+<h3>Обратная связь</h3>
+
+<div class="article">
+	<div class="article-head">Общее описание</div>
+	<div class="article-text">
+		<p>Модуль предназначен для обработки разнообразных форм обратной связи.</p>
+		<p>
+			Для быстрого старта просто настройте почтовую отправку и напишите на странице или шаблоне
+			сайта <pre>[macro type=&quot;feedback&quot; /]</pre>
+			Все необходимое уже есть в комплекте поставки.
+		</p>
+	</div>
+</div>
+
+<div class="article">
+	<div class="article-head">Использование</div>
+	<div class="article-text">
+		<ul>
+			<li>
+				Чтобы создать простую форму обратной связи, просто помещаем в нужное место (на странице или основном шаблоне) следующий макрос:
+				<pre>[macro type=&quot;feedback&quot; /]</pre>
+			</td></tr>
+			<li>
+				Чтобы выбрать получателя, используем параметр target (см. раздел &quot;Настройки - получатели&quot;):
+				<pre>[macro type=&quot;feedback&quot; target=&quot;service&quot; /]</pre>
+			</td></tr>
+			<li>
+				Чтобы выбрать другую форму, можно использовать параметр template (по умолчанию будет использовано значение &quot;default&quot;).
+				<pre>[macro type=&quot;feedback&quot; template=&quot;special&quot; /]</pre>
+				Форма будет взята из папки&#160;<code>/modules/feedback/forms/</code>, с выбранным именем и расширением html.
+			</td></tr>
+		</ul>
+	</div>
+</div>
+
+<div class="article">
+	<div class="article-head">Настройки - основные</div>
+	<div class="article-text">
+		<table class="table table-bordered">
+			<tr>
+				<td><strong>Тип (SMTP или sendmail):</strong></td>
+				<td>
+					Используемый способ отправки писем. <strong>Sendmail</strong> использует встроенную почтовую систему хостинговой площадки и не требует
+					дополнительной настройки, но часто не позволяет выбрать, от какого имени будут отправляться сообщения. <em>Если выбран этот способ,
+					все остальные настройки будут игнорированы.</em> <strong>SMTP</strong> позволяет использовать практически любую почтовую систему,
+					как платную, так и бесплатную (mail.ru, gmail.com и почие). Кроме того, письма, отправленные таким способом, с меньшей вероятностью
+					будут попадать в спам.
+				</td>
+			</tr>
+			<tr>
+				<td><strong>Сервер:</strong></td>
+				<td>SMTP-сервер для отправки писем. Обратитесь к документации по хостиновой площадке.</td>
+			</tr>
+			<tr>
+				<td><strong>Порт:</strong></td>
+				<td>порт сервера. Обычно <strong>25</strong>, <strong>465</strong> или <strong>587</strong>.</td>
+			</tr>
+			<tr>
+				<td><strong>Тип аутентификации:</strong></td>
+				<td><strong>plain</strong> или <strong>login</strong>.</td>
+			</tr>
+			<tr>
+				<td><strong>Логин:</strong></td>
+				<td>логин для входа на почтовый сервер. В бесплатных сервисах обычно полный адрес.</td>
+			</tr>
+			<tr>
+				<td><strong>Пароль:</strong></td>
+				<td>***********</td>
+			</tr>
+			<tr>
+				<td><strong>Строка приветствия:</strong></td>
+				<td>
+					параметр определяется опытным путем - это может быть полный почтовый адрес отправителя (часто
+					встречается в бесплатных почтовых сервисах), значение &quot;<strong>localhost</strong>&quot;,
+					название почтового сервиса, пустое значение или что-то еще. Подробнее в разделе
+					<a href="#techs" alt="techs" >Технические вопросы</a>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>Обратный адрес:</strong></td>
+				<td>
+					значение, которое будет в поле &quot;обратный адрес&quot; сообщений. Многие сервера требуют, чтобы
+					совпадало с адресом, закрепленным за пользователем, определяемым полем &quot;логин&quot;.
+				</td>
+			</tr>
+			<tr>
+				<td><strong>Режим отладки:</strong></td>
+				<td>если включен (стоит &quot;<strong>1</strong>&quot;) и включен режим администрирования, то будет показан лог отправки сообщения.</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<div class="article">
+	<div class="article-head">Настройки - получатели</div>
+	<div class="article-text">
+		<div class="pic-with-text" style="float: right; margin-right: 0em;">
+			<img src="help.php?path=feedback&proxy=feedback1.png" alt="" />
+			<div style="left: 110px; top: 46px; width: 10em; height: 4em;" class="pic-text">
+				Нужен кто-то<br />из этого списка</br>&lt;---
+				<div class="pic-text-back"></div>
+			</div>
+		</div>
+		Есть возможность в самой форме указать, на какой адрес пойдет сообщение. Для этого в макросе создания формы нужно указать параметр
+		&quot;target&quot;. Например: <pre>[macro type=&quot;feedback&quot; target=&quot;default&quot;]</pre> Если значение параметра будет
+		найдено среди списка возможных получателей, то будет выбран адрес, сооветствующий этому получателю. Если параметр не задан или значение
+		некорректно, сообщения будет получать первый адресат из списка.
+	</div>
+</div>
+
+<div class="article">
+	<div class="article-head">Настройки - тема</div>
+	<div class="article-text">
+		<p>
+			При отправке письма тема берется из значения тега <strong>&lt;title&gt;</strong> шаблона письма. Если тег не будет найден, будет
+			использовано значение параметра &quot;Тема по умолчанию&quot;.
+		</p>
+	</div>
+</div>
+
+<div class="article"i id="techs">
+	<div class="article-head">Технические вопросы</div>
+	<div class="article-text">
+		<ul>
+			<li>За выбор получателя письма в форме отвечает скрытый контрол следующего вида:<pre>&lt;input type=&quot;hidden&quot; name=&quot;recipient&quot; value=&quot;default&quot; /&gt;</pre></td></tr>
+			<li>За выбор шаблона письма в форме отвечает такой контрол (используется значение из макроса, если там нету или некорректное, то из шаблона):<pre>&lt;input type=&quot;hidden&quot; name=&quot;template&quot; value=&quot;default&quot; /&gt;</pre></td></tr>
+			<li>Если шаблон письма не найдется, система попробует использовать&#160;<code>_error_detected.html</code>, если не найдет - использует &quot;вшитую строку&quot;</td></tr>
+			<li>Строки приветствия (EHLO) для популярных почтовых серверов:
+				<table class="table table-bordered">
+					<tr><td>mail.ru</td><td>mail.ru</td></tr>
+					<tr><td>yandex.ru</td><td>полный почтовый адрес</td></tr>
+					<tr><td>gmail.com</td><td>полный почтовый адрес</td></tr>
+				</table>
+			</td></tr>
+		</ul>
+	</div>
+</div>

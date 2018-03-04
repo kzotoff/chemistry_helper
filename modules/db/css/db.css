@@ -1,0 +1,548 @@
+/*
+    datablock structure guide:
+
+    div.datablock-wrapper[data-report-id="report-identifier"] - entire external container
+        div.datablock-buttons                                 - associated buttons
+        div.datablock-header                                  - header scroller helper
+            table                                             - headers table
+                thead
+                    tr
+                        th
+                            div.datablock-header-text         - container for header text
+                                [HEADER TEXT]
+                            [RESIZE HANDLE WILL BE HERE]
+        div.datablock-content                                 - content scroller area
+            table                                             - content table
+                colgroup
+                    col
+                tbody
+                    tr[data-row-id="row-identifier"]
+                        td[data-field-name="db-module-field-name"]
+
+
+
+
+
+*/
+
+/*************************************************************************************************/
+/* misc ******************************************************************************************/
+/*************************************************************************************************/
+
+.datablock-wrapper>div.json_data {
+    display : none !important;
+}
+
+/* some patch */
+ul.ui-autocomplete {
+    padding-bottom: 1px;
+}
+/*************************************************************************************************/
+/* double-scroller mechanism - separated from others. don't modify without understanding *********/
+/*************************************************************************************************/
+.datablock-header {
+    overflow-x : hidden; /* force no horizontal scroll */
+    overflow-y : scroll; /* force vertical scroll ensuring padding spacer */
+    width      : 100%;
+}
+
+.datablock-header>table {
+    margin : 0px;
+}
+
+.datablock-content {
+    overflow-x : auto;
+    overflow-y : scroll;
+    width      : 100%;
+}
+
+.datablock-content>table {
+    margin : 0px;
+}
+
+/*************************************************************************************************/
+/* mass operator dialog **************************************************************************/
+/*************************************************************************************************/
+
+.mass-operator-dialog {
+    height: 500px;
+    width: 600px;
+}
+
+.mass-operator-log {
+    height: 480px;
+    width: 600px;
+    overflow-y: scroll;
+}
+.mass-operator-log p {
+    margin: 0px;
+}
+
+.mass-operator-gauge-outer {
+    height: 20px;
+    width: 600px;
+    background-color : white;
+    border: 1px #ccc solid;
+}
+
+.mass-operator-gauge-inner {
+    width: 0%;
+    height: 100%;
+    background-color : blue;
+}
+.mass-operator-error {
+    color: #f00;
+    white-space: pre;
+    border: #800 1px solid;
+}
+/*************************************************************************************************/
+/* special disabler class ************************************************************************/
+/*************************************************************************************************/
+.datablock-no-scroller>.datablock-wrapper>div {
+    overflow: visible;
+}
+
+/*************************************************************************************************/
+/* common datablock styling **********************************************************************/
+/*************************************************************************************************/
+.datablock-wrapper {
+    width       : 100%;
+    font-family : tahoma, verdana, arial;
+    color       : #333;
+}
+
+/* some common for both header and contents */
+    .datablock-wrapper>div>table {
+        table-layout : fixed;
+        border-collapse: collapse;
+    }
+        .datablock-wrapper>div>table>*>tr>* {
+            border: 1px #bbb solid;
+            text-align: center;
+        }
+
+    input[data-meaning="row-select-checkbox"] {
+        width: 1.2rem;
+        height: 1.2rem;
+        border: 1px gray solid;
+        border-radius: 3px;
+    }
+        input[data-meaning="row-select-checkbox"][data-was-checked="yes"] {
+            border: 2px #333 solid;
+        }
+
+    /* controls at the header */
+    .datablock-buttons {
+        padding : 5px;
+        width   : 100%;
+        display : inline-block;
+    }
+
+    .datablock-caption {
+        padding        : 5px;
+        display        : inline-block;
+        font-size      : 1.4em;
+        vertical-align : middle;
+    }
+
+        .datablock-buttons div {
+            /* padding : 0px; */
+        }
+
+        .datablock-buttons>* {
+            margin : 5px 3px;
+        }
+
+        .datablock-buttons input[type="checkbox"] {
+            width         : 1.2rem;
+            height        : 1.2rem;
+            border        : 1px gray solid;
+            border-radius : 3px;
+            margin        : 1px 0px 0px 0px;
+        }
+
+        .datablock-buttons img {
+            vertical-align : text-top; /* don't know why but this is the best variant */
+            margin         : 1px 0px 0px 0px;
+        }
+            .datablock-buttons img+span,
+            .datablock-buttons input+span {
+                margin-left: 7px;
+            }
+
+
+        /* filter and calendar inputs */
+        .datablock-buttons>div.datablock-header-control {
+            position: relative;
+            display: inline-block;
+        }
+            .datablock-buttons input{
+                display: inline-block;
+                vertical-align: middle;
+            }
+            .datablock-buttons input[data-meaning="simple-search-box"],
+            .datablock-buttons input[data-meaning="simple-filter-box"] {
+                width: 10em;
+            }
+            .datablock-buttons input[data-meaning="simple-calendar"] {
+                width: 9em;
+            }
+            .datablock-buttons [data-meaning="simple-filter-cleaner"] {
+                display: inline-block;
+                position: absolute;
+                right: 4px;
+                top: 5px;
+                width: 22px;
+                line-height: 22px;
+
+                vertical-align: middle;
+                text-align: center;
+                border: 1px #888 solid;
+                border-radius: 3px;
+                background-color: #ddd;
+                color: #666;
+                cursor: pointer;
+            }
+            .datablock-buttons [data-meaning="simple-filter-cleaner"][disabled] {
+                opacity: 0.36;
+            }
+
+            .datablock-buttons .calendar-holiday a.ui-state-default {
+                color: red;
+            }
+
+
+
+
+        .datablock-buttons .datablock-row-count {
+            font-weight: bold;
+            position: relative;
+        }
+            .datablock-buttons .datablock-row-count-hidden {
+				display: none !important;
+			}
+            .datablock-buttons .datablock-row-count span {
+                padding-left: 20px;
+                background-position: left 2px;
+                background-repeat: no-repeat;
+                display: inline-block;
+            }
+            .datablock-buttons .datablock-row-count span {
+                margin-right: 4px;
+            }
+            .datablock-buttons .datablock-row-count span[data-meaning="count-total"] {
+                margin-right: 0px;
+            }
+            .datablock-buttons .datablock-row-count [data-meaning="count-checked"] {
+                background-image: url('../images/checkbox_gray.png');
+            }
+            .datablock-buttons .datablock-row-count [data-meaning="count-visible"] {
+                background-image: url('../images/eye_gray.png');
+            }
+            .datablock-buttons .datablock-row-count [data-meaning="count-on-page"] {
+                background-image: url('../images/page_gray.png');
+            }
+            .datablock-buttons .datablock-row-count [data-meaning="count-filtered"] {
+                background-image: url('../images/filter_gray.png');
+            }
+            .datablock-buttons .datablock-row-count [data-meaning="count-total"] {
+                background-image: url('../images/total_gray.png');
+            }
+
+            /* filter informer popup */
+            .datablock-buttons .datablock-buttons-popup {
+                display: none;
+                z-index: 5;
+                padding: 0.7em;
+                border: 1px #ccc solid;
+                left: -1px;
+                position: absolute;
+                top: 2.3em;
+                background-color: white;
+                border-radius: 0px 3px 4px 4px;
+                box-shadow: 1px 2px 2px 0px #ccc;
+                cursor: default;
+
+            }
+                .datablock-buttons .datablock-buttons-popup .btn img {
+                    vertical-align: top;
+                }
+                .datablock-buttons .datablock-buttons-popup>[data-meaning="filter-info"],
+                .datablock-buttons .datablock-buttons-popup>[data-meaning="filter-helper"] {
+                    display: table;
+                }
+                .datablock-buttons .datablock-buttons-popup>[data-meaning="filter-helper"] {
+                    margin-top: 8px;
+                }
+                    .datablock-buttons .datablock-buttons-popup>[data-meaning="filter-info"]>div,
+                    .datablock-buttons .datablock-buttons-popup>[data-meaning="filter-helper"]>div {
+                        display: table-row;
+                    }
+                    .datablock-buttons .datablock-buttons-popup>[data-meaning="filter-info"]>div>span,
+                    .datablock-buttons .datablock-buttons-popup>[data-meaning="filter-helper"]>div>span {
+                        display: table-cell;
+                        max-width: 450px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    .datablock-buttons .datablock-buttons-popup>[data-meaning="filter-info"]>div>span {
+                        padding: 3px;
+                    }
+                    .datablock-buttons .datablock-buttons-popup>[data-meaning="filter-info"]>div>span:first-child {
+                        padding-right: 7px;
+                    }
+
+                    .datablock-buttons .datablock-buttons-popup>[data-meaning="filter-helper"]>div>span:first-child {
+                        text-align: left;
+                        padding-left: 5px;
+                        padding-right: 7px;
+                    }
+
+                .datablock-buttons .datablock-buttons-popup .filter-dialog-button {
+                    margin: 0.75em;
+                }
+
+
+        .datablock-filter-buttons {
+        }
+            .datablock-filter-buttons .btn-group {
+                margin-right: 0.5em;
+            }
+                .datablock-filter-buttons .datablock-filter-button {
+                    /* display: relative; */
+                    border-width: 0px !important;
+                    margin-left: 1px !important;
+                }
+                .datablock-filter-buttons input[type="checkbox"] {
+                    margin-top: 0px;
+                    border: 1px white solid;
+                    position: relative;
+                    z-index: 10;
+                    background-color: transparent;
+                    color: white;
+                }
+                .datablock-filter-buttons input[type="checkbox"]:checked {
+                    background-color: #f44;
+                }
+                .datablock-filter-buttons .button-caption {
+                    margin-left: 0.5em;
+                    position: relative;
+                    z-index: 10;
+                }
+                .datablock-filter-buttons input[type="checkbox"]+span.decorative {
+                    position: absolute;
+                    border-radius: inherit;
+                    z-index: 9;
+                    left: 0px;
+                    top: 0px;
+                    width: 100%;
+                    height: 100%;
+                    display: none;
+                    background-color: #f44;
+                }
+                .datablock-filter-buttons input[type="checkbox"]:checked+span.decorative {
+                    display: block;
+                }
+
+    .datablock-header {
+        /* border : 1px #bbb solid; */
+    }
+        .datablock-header>table {
+            text-align  : center;
+            font-weight : bold;
+        }
+            .datablock-header th {
+                height      : 2.8em;
+                line-height : 1.2em;
+            }
+                .datablock-header .datablock-header-text {
+                    border   : 0px red solid;
+                    width    : 100%;
+                    padding  : 0px 0px;
+                    overflow : hidden;
+                }
+
+    .datablock-content {
+        /* border : 1px #bbb solid; */
+    }
+        .datablock-content>table {
+        }
+
+            .datablock-content>table>tbody>tr:nth-child(odd) {
+                background-color : #ffffff;
+            }
+            .datablock-content>table>tbody>tr:nth-child(odd):hover {
+                background-color : #dfdfdf;
+            }
+            .datablock-content>table>tbody>tr:nth-child(even) {
+                background-color : #f4f4f4;
+            }
+            .datablock-content>table>tbody>tr:nth-child(even):hover {
+                background-color : #d4d4d4;
+            }
+
+                .datablock-content>table>tbody>tr td {
+                    overflow : hidden;
+                    padding  : 3px;
+                }
+
+/*************************************************************************************************/
+/* loadingbars ***********************************************************************************/
+/*************************************************************************************************/
+.button-with-loader {
+    background-image    : url('../images/loadingbar.gif');
+    background-position : center center;
+    background-repeat   : no-repeat;
+}
+
+/*************************************************************************************************/
+/* context menu **********************************************************************************/
+/*************************************************************************************************/
+.context_menu {
+    position            : absolute;
+    top                 : 10px;
+    left                : 10px;
+    background-color    : #ccc;
+    z-index             : 900;
+    box-shadow          : 3px 3px 4px 0px gray;
+    border              : 1px #ccc solid;
+    font-family         : verdana, tahoma, arial;
+    font-size           : 12px;
+}
+
+.contextmenu_table {
+    border-collapse     : collapse;
+    min-width           : 10em;
+}
+
+.contextmenu_table tr {
+    height              : 22px;
+    vertical-align      : middle;
+}
+
+.contextmenu_table tr.contextmenu_divider{
+    height              : 16px;
+}
+
+.contextmenu_table td {
+    border-width        : 0px;
+    color               : black;
+    padding             : 3px 5px 3px 2px;
+    cursor              : pointer;
+}
+
+.contextmenu_table td hr {
+    border-color        : #ccc white white #ccc;
+    border-width        : 1px;
+    border-style        : inset;
+    margin-top          : 0px; /* override bootstrap values */
+    margin-bottom       : 0px;
+}
+
+.contextmenu_table tr:hover td {
+    color               : white;
+    background-color    : #333;
+}
+
+.contextmenu_table tr.contextmenu_item_disabled td {
+    color               : gray;
+    text-shadow         : 1px 1px 1px white;
+    cursor              : default;
+}
+
+.contextmenu_table tr.contextmenu_item_disabled:hover td {
+    background-color    : inherit;
+}
+
+.db-menu-source-row {
+    background          : #fbb !important;
+}
+
+
+input[data-meaning="simple-search-box"],
+input[data-meaning="simple-filter-box"] {
+    width: 10em;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+/*************************************************************************************************/
+/* help help *************************************************************************************/
+/*************************************************************************************************/
+.db_help_popup {
+    font-size: 0.9em;
+    line-height: 1.6em;
+}
+
+.db_help_popup a {
+    text-decoration: underline;
+    color: blue;
+}
+
+.db_help_popup h4 {
+    list-style-type: none;
+    margin-bottom: 0.2em;
+    font-size: 1.2em;
+}
+
+.db_help_popup p {
+    margin-left: 1em;
+
+
+}
+
+
+
+/*************************************************************************************************/
+/* filter dialog *********************************************************************************/
+/*************************************************************************************************/
+.filter-dialog {
+}
+    .filter-dialog .filter-elem {
+        margin: 0.8em 0em;
+        text-align: left;
+        padding: 0.4em 0em;
+    }
+    .filter-dialog .filter-elem[data-meaning="filter-add-more"] {
+        margin-top: 0px;
+    }
+        .filter-dialog .filter-elem .form-control:not(.custom-combobox-input),
+        .filter-dialog .filter-elem .custom-combobox,
+        .filter-dialog .filter-elem .btn {
+            display: inline-block;
+            margin: 0px 0.25em;
+            vertical-align: middle;
+        }
+
+        .filter-dialog .filter-elem .form-control[data-meaning="field-selector"] {
+            width: 12em;
+        }
+        .filter-dialog .filter-elem .form-control[data-meaning="filter-type"] {
+            width: 9em;
+        }
+        .filter-dialog .filter-elem .form-control[data-meaning="filter-param"] {
+            width: 17em;
+        }
+        .filter-dialog .filter-elem .btn {
+            width: 4em;
+        }
+    .filter-dialog .filter-elem-template>* {
+        visibility: hidden;
+    }
+    .filter-dialog .filter-elem-template .filter-elem-add {
+        visibility: visible;
+    }
+    .filter-dialog .filter-elem-template .filter-elem-remove {
+        display: none;
+    }
+    .filter-dialog .filter-elem-unsaved {
+        border: 1px green dashed;
+    }
+
+    .filter-dialog .custom-combobox {
+        width: auto;
+    }
+    .filter-dialog .custom-combobox .custom-combobox-toggle {
+        right: -1px;
+    }

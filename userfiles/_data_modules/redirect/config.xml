@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<JuliaCMS_module_definition>
+	<version caption="Версия">1.0</version>
+	<comment caption="Описание">Перенаправление</comment>
+	<main_script>func.php</main_script>
+	<class_name>J_Redirect</class_name>
+	<admin_caption>redirect</admin_caption>
+	<admin_css>admin.css</admin_css>
+	<config caption="Настройка:">
+		<redirect_rules caption="Правила перенаправления">
+			<rule caption="Пример точного совпадения">
+				<check caption="Строка для поиска">key1=value1&amp;key2=value2222</check>
+				<code caption="HTTP-код">502</code>
+			</rule>
+			<rule caption="Неточное совпадение">
+				<check caption="Условия поиска">
+					<key1>value1</key1>
+					<key2>value2</key2>
+				</check>
+				<location caption="Адрес перенаправления">now-redirect-here</location>
+			</rule>
+		</redirect_rules>
+	</config>
+</JuliaCMS_module_definition>

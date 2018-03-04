@@ -1,0 +1,55 @@
+<h3>Возможные неприятности</h3>
+
+<div class="article">
+	<div class="article-head">Проблемы внешнего характера</div>
+	<div class="article-text">
+		<p>
+			Система не отслеживает свободное место на диске, поэтому его необходимо периодически проверять
+			самостоятельно.
+		</p>
+		
+		<p>
+			Если у вас есть ограничено свободное место в базе данных, не забывайте и его проверять.
+		</p>
+		
+		<p>
+			В ряде случаев системе нужны права на запись в определенные папки на диске, а именно:
+			<ul>
+				<li>
+					Если вы используете SQLite в качестве БД, необходим доступ на запись в файл БД.
+					В стандартной поставке это <code>userfiles/_data_common/cms.sqlite</code>.
+				</li>
+				<li>
+					Кроме того, SQLite используется плагином minigallery текстового редактора, файл с
+					базой лежит вот здесь: <code>userfiles/_data_common/minigallery.sqlite</code>. Сами
+					картинки по умолчанию хранятся в <code>userfiles/images/gallery/</code>
+				</li>
+				<li>
+					Если используется модуль &quot;<strong>db</strong>&quot;, то ему потребуется папка
+					для хранения файлов, приложенных к комментариям, с правом записи в нее:
+					<code>userfiles/_data_modules/db/attached/</code>
+				</li>
+				<li>
+					Наконец, модулю администрирования для сохранения параметров модулей и самой системы
+					потребуется запись в файлы <code>userfiles/_data_modules/*****/config.xml</code>
+					и в файл <code>userfiles/_data_common/conf.php</code>.
+				</li>
+
+			
+			</ul>
+		</p>
+	</div>
+</div>
+
+<div class="article">
+	<div class="article-head">Проблемы с CMS</div>
+	<div class="article-text">
+	</div>
+</div>
+
+<div class="article">
+	<div class="article-head">Разное</div>
+	<div class="article-text">
+	</div>
+</div>
+

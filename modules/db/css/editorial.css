@@ -1,0 +1,47 @@
+/*************************************************************/
+/*** row-edit popup dialog ***********************************/
+/*************************************************************/
+
+
+/*** common formatting ***************************************/
+.edit-dialog-wrapper {
+	min-width           : 600px;
+
+}
+
+div[data-form-container="edit-dialog-form"] {
+	padding-top         : 1rem;
+}
+
+/*** categories buttons **************************************/
+.edit-dialog-categories {
+	border-bottom       : 1px #ccc dashed;
+	margin-bottom       : 0.6em;
+}
+
+.edit-dialog-categories input {
+	margin              : 0px 5px 10px 5px;
+}
+
+
+/*** helper buttons ******************************************/
+.edit-dialog-helper {
+	position: absolute;
+	right: 18px;
+	top: 3px;
+	height: 28px;
+	width: 3.5em;
+	border: 1px gray solid;
+	border-radius: 3px;
+	background-color: #ddd;	
+}
+
+/*** bottom buttons ******************************************/
+.edit-dialog-buttons {
+	text-align          : right;
+}
+
+.edit-dialog-buttons input {
+	margin              : 5px 5px 5px 5px;
+}
+

@@ -1,0 +1,110 @@
+/*****************************************************************************/
+/* reset all *****************************************************************/
+/*****************************************************************************/
+* {
+	margin              : 0px;
+	padding             : 0px;
+	box-sizing          : border-box;
+}
+
+
+/*****************************************************************************/
+/* popups ********************************************************************/
+/*****************************************************************************/
+
+.popup-container {
+	position            : fixed;
+	top                 : 3rem;
+	right               : 2rem;
+	width               : 40em;
+	max-height          : 50em;
+	overflow-y          : auto;
+	z-index             : 1002; /* jQuery.dialog has background z-index 1001 and dialog itself has z-index 1002 */
+}
+
+.popup-message {
+	width               : 100%;
+	border-radius       : 5px;
+	border-width        : 2px;
+	border-style        : solid;
+	margin              : 1rem auto;
+	padding             : 0.5rem;
+	font-weight         : bold;
+	z-index             : 1003;
+}
+
+.popup-info {
+	border-color        : #55f;
+	background-color    : #8cc2ff;
+}
+
+.popup-ok {
+	border-color        : #080;
+	background-color    : #6aff6a;
+}
+
+.popup-warning {
+	border-color        : #c60;
+	background-color    : #ffa956;
+}
+
+.popup-error {
+	border-color        : #800;
+	background-color    : #ff9191;
+}
+
+.popup-fatal {
+	border-color        : #000;
+	background-color    : #aaaaaa;
+}
+
+
+ 
+/*****************************************************************************/
+/* admin forms ***************************************************************/
+/*****************************************************************************/
+
+/* some patches for bootstrap */
+.admin_edit_form .form-group {
+	margin-bottom       : 3px;
+}
+
+.admin_edit_form .form-control {
+	height              : auto;
+}
+
+.admin_edit_form .dialog_buttons {
+	margin              : auto 30px;
+	padding             : 1em;
+	text-align          : right;
+}
+
+.admin_edit_form input[type="checkbox"], .admin_edit_form input[type="radio"] {
+	margin-top          : 12px;
+}
+
+.no_special_administration {
+	padding             : 1em;
+}
+
+/*****************************************************************************/
+/* loading-bar ***************************************************************/
+/*****************************************************************************/
+#loading_back {
+	left                : 0px;
+	top                 : 0px;
+	width               : 100%;
+	height              : 100%;
+	position            : fixed;
+	background          : white;
+	opacity             : 0.6;
+}
+
+#loading_bar {
+	left                : 0px;
+	top                 : 0px;
+	width               : 100%;
+	height              : 100%;
+	position            : fixed;
+	background          : transparent url('../images/loadingbar.gif') no-repeat center center;
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<JuliaCMS_module_definition>
+	<version caption="Версия">1.0</version>
+	<comment caption="Описание">SMS</comment>
+	<main_script>sms.php</main_script>
+	<class_name>J_SMS_ru</class_name>
+	<css>sms.css</css>
+	<js>sms.js</js>
+	<admin_caption>sms</admin_caption>
+	<admin_css>sms</admin_css>
+	<config caption="Настройка:">
+		<api_id caption="API ID"></api_id>
+	</config>
+</JuliaCMS_module_definition>

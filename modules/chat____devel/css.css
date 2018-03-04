@@ -1,0 +1,35 @@
+/*** chat ********************************************************************/
+.j-chat { 
+	display: none;
+	position: fixed;
+	left: 0.5rem;
+	top: 5rem;
+	width: 200px;
+	height:  300px;
+	border: 1px #ddd dashed;
+	font-size: 10px;
+	overflow-y: auto;
+}
+
+.j-chat>div {
+	width: 100%;
+	height: 90%;
+}
+
+.j-chat>form {
+	width: 100%;
+	height: 10%;
+	text-align: center;
+}
+.j-chat>form>input {
+	width: 95%;
+	height: 90%;
+	margin-bottom: 0px;
+	border-width: 1px;
+	border-style: dashed;
+	border-color: #ddd;
+	padding: 3px;
+}
+.j-chat>form>input:focus {
+	box-shadow: 0px 0px 3px 3px #8df;
+}

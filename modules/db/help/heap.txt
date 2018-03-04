@@ -1,0 +1,21 @@
+как добавляем свою функцию:
+
+1) /modules/_data_modules/db/func.php:
+	а) объявляем в $actions, если хотим прикреплять к менюшке
+	б) в любом случае объявляем в $methods
+	в) пишем саму процедуру
+
+2) Чтобы не прописывать руками всякие сабмиты и прочую муть, делаем так:
+	контейнеру (форме или диву или что там еще) даем атрибут data-form-name="FORM_NAME"
+	кнопке сабмита даем data-button-action="form-submit" и data-form-submit="FORM_NAME"
+	кнопке отметы data-button-action="form-cancel"
+
+	
+	
+элементы контекстного меню могут иметь такие атрибуты:
+	data-call-api: автоматически вызовется метод callAPI с таким аргументом
+	data-after-api: функция добавится в callbacks при вызове callAPI
+	
+	data-meaning="simple-search-box" - навешиваем на инпут для поиска
+	data-scroll-container="div.table-is-inside-me" - что скроллить при поиске
+	data-search-in="table td" - селектор элементов в которых поиск делать

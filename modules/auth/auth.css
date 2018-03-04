@@ -1,0 +1,58 @@
+/* login form */
+.login_form_wrapper { width: 400px; }
+.login_form_wrapper .buttons { text-align: center; padding-top: 7px; }
+.login_form_wrapper .buttons input[type="submit"] { width: 12rem; }
+
+.login_messagebox_outer {
+	height: 2em;
+}
+#login_messagebox {
+	display: none;
+	border: 1px transparent solid;
+	border-radius: 3px; 
+	color: #333; 
+	font-size: 1.5em; 
+	white-space: normal; 
+}
+
+.login_messagebox_waiting { border-color: transparent; background-color: transparent; }
+.login_messagebox_success { background-color: #cfc; border-color: green; }
+.login_messagebox_error { background-color: #fcc; border-color: red; }
+
+
+
+.login-form-logo {
+	margin-bottom: 2em;
+}
+/* vertical alignment */
+html, body { height: 100%; width: 100%; }
+
+.login-form-outer {
+	display: table; width: 100%; height: 100%;
+}
+.login-form-middle {
+	display: table-row;
+}
+.login-form-inner {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+.login_form_wrapper {
+	display: inline-block;
+}
+
+/**
+ * these all are bootstrap patches. anyone who knows how to align all
+ * that controls using only BS's features please write me!
+ */
+.login_form_wrapper .control-label {
+	text-align: left;
+	padding-top: 0px;
+}
+.login_form_wrapper input[type="checkbox"] {
+	margin-top: 0px;
+	display: inline-block;
+	height: 2em;
+	width: 2em;
+}

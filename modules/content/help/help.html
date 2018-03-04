@@ -1,0 +1,166 @@
+<h3>Управление страницами</h3>
+
+<div class="article">
+	<div class="article-head">Общее описание</div>
+	<div class="article-text">
+		<p>Здесь вы можете управлять самым главным, что есть на вашем сайте &#8212; его страницами.</p>
+		<p>Если вы еще не сделали этого, закройте справку, нажмите на кнопку <span class="like-admin-box" data-flash-item="[data-button-target=&quot;module-content&quot;]">pages</span> на административной панели, и вызовите справку снова.</p>
+	</div>
+</div>
+
+<div class="article" id="creating-page">
+	<div class="article-head">Создание страницы</div>
+	<div class="article-text">
+		<p>
+			Просто нажмите кнопку <button class="btn btn-default btn-xs">Добавить</button>&#160;), заполните предложенную
+			форму (обязательно только поле &quot;Псевдоним&quot;, подробнее в разделе <a href="#pageprops">описание свойств страницы</a>),	и нажмите
+			<button class="btn btn-primary btn-xs" style="vertical-align: text-bottom;">Сохранить</button>.
+		</p>
+
+	</div>
+</div>
+
+<div class="article">
+	<div class="article-head">Редактирование содержимого страницы</div>
+	<div class="article-text">
+		<ul>
+			<li>
+				Если вы находитесь в разделе управления страницами, то наведите курсор мыши на нужную страницу и нажмите на эту кнопку:
+				<img src="help.php?path=content&proxy=right_green.gif" alt="edit" />
+			</li>
+			<li>
+				Если вы просматриваете сайт, то для редактирования текущей страницы просто нажмите <span class="like-admin-box" href="#" alt="">edit this page</span>
+				на административной панели.
+			</li>
+			<li>
+				Редактирование страницы происходит с помощью визуального редактора, напоминающего обычный текстовый редактор из обычного офисного пакета. Инструкция
+				по работе с ним находится чуть ниже, в разделе &quot;Визуальный редактор страниц&quot;
+			</li>
+			<li>
+				Когда изменения внесены, нажмите кнопку <span class="like-admin-box" href="#" alt="">save page</span> на административной панели. Если
+				вы передумали и сохранять страницу не надо, там же есть кнопка <span class="like-admin-box" href="#" alt="">cancel</span>.
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="article">
+	<div class="article-head">Работа со списком страниц</div>
+	<div class="article-text">
+		<p>
+			Для <strong>изменения свойств</strong> страницы наведите курсор мыши на нужную страницу и нажмите на кнопку свойств
+			(&#160;<img src="help.php?path=content&proxy=pencil.gif" alt="edit" />&#160;) или просто на любое место строки, где нет других кнопок, сделайте необходимые изменения и нажмите
+			<button class="btn btn-primary btn-xs" style="vertical-align: text-bottom;">Сохранить</button>
+		</p>
+		<p>
+			Для <strong>редактирования содержимого</strong> страницы используйте кнопку &quot;переход к странице&quot; (&#160;<img src="help.php?path=content&proxy=right_green.gif" alt="edit" />&#160;).
+		</p>
+		<p>
+			Для <strong>удаления</strong> страницы служит кнопка удаления (&#160;<img src="help.php?path=content&proxy=redcross.gif" alt="del" />&#160;). Страница не удаляется
+			безвозвратно, а попадает в &quot;корзину&quot;. Оттуда ее можно перенести обратно с помощью <a href="help.php?path=filemanager#general">файлового менеджера</a>.
+		</p>
+	
+	</div>
+</div>
+
+<div class="article" id="pageprops">
+	<div class="article-head">Описание свойств страницы</div>
+	<div class="article-text">
+		<p>Обязательным для заполнения являкется только поле &quot;псевдоним&quot;</p>
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>Свойство</th>
+					<th>Описание</th>
+				</tr>
+			<thead>
+			<tbody>
+				<tr>
+					<td>Заголовок</td>
+					<td>Текст, который будет отображен в заголовке окна при выборе этой страницы</td>
+				</tr>
+				<tr>
+					<td><strong>Псевдоним</strong></td>
+					<td>
+						<div class="pic-with-text" style="float: right; margin: 2px 4px 0px 7px;">
+							<img src="help.php?path=content&amp;proxy=content1.png" alt="" />
+						</div>
+						Имя страницы, как оно появляется в адресной строке. На рисунке справа это будет &quot;informer&quot;.
+						Допускаются большие и маленькие латинские буквы, цифры, дефис и знак подчеркивания.
+					</td>
+				</tr>
+				<tr>
+					<td>Имя файла</td>
+					<td>Имя файла, в котором будет храниться страница. По умолчанию будет использован псевдоним и расширение .html</td>
+				</tr>
+				<tr>
+					<td>meta</td>
+					<td>метатеги для страницы. О формате записи подробнее написано в <a href="#techs" alt="techs">технических вопросах</a>.</td>
+				</tr>
+				<tr>
+					<td>CSS</td>
+					<td>
+						Таблица стилей для страницы, должна находиться в папке CSS пользовательских файлов. Подробнее в документации
+						по <a href="help.php?path=filemanager#directories">файловому менеджеру</a>.
+					</td>
+				</tr>
+				<tr>
+					<td>Скрипт</td>
+					<td>Скрипт на языке javascript, из пользовательской папки со скриптами.</td>
+				</tr>
+				<tr>
+					<td>PHP-генератор</td>
+					<td>
+						Если не хочется делать статическую страницу, можно сгенерировать ее с помощью функции на языке PHP.
+						Подробнее в &quot;технических вопросах&quot;.
+					</td>
+				</tr>
+				<tr>
+					<td>XSL</td>
+					<td>
+						Кроме всего этого, страница может представлять из себя XML документ, к которому можно применить
+						XSL-трансформацию. Подобно таблицам стилей и скриптам, файл с трансформацией должен лежать в
+						соответственной папке.
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div class="article" id="techs">
+	<div class="article-head">Технические вопросы</div>
+	<div class="article-text">
+		<p>В шаблоне сайта за положение контента отвечает макрос <pre>[macro type="content" /]</pre>Никаких дополнительных параметров не предусмотрено.</p>
+		
+		<p>
+			<strong>Формат метатегов:</strong>
+			<ul>
+				<li>
+					Самый простой вариант &#8212; просто написать какие-то ключевые слова (то есть, буквы, цифры, точка, запятая).
+					В таком случае к странице будет добавлена такая конструкция:
+					<pre>&lt;meta keywords=&quot;<em>тут-будут-ключевые-слова</em>&quot; /&gt;</pre>
+				</li>
+				<li>
+					Формат посложнее:
+					<pre>(<span style="color: green;">атрибут</span>|<span style="color: blue;">значение атрибута</span>|<span style="color: red;">содержимое</span>) (...) (...)</pre>
+					На каждую пару скобок будет создан метатег вида
+					<pre>&lt;meta <span style="color: green;"><em>атрибут</em></span>=&quot;<span style="color: blue;"><em>значение атрибута</em></span>&quot; content=&quot;<span style="color: red;"><em>содержимое</em></span>&quot; /&gt;</pre>
+					или, если параметр &quot;содержимое&quot; пустой, то
+					<pre>&lt;meta <span style="color: green;"><em>атрибут</em></span>=&quot;<span style="color: blue;"><em>значение атрибута</em></span>&quot; /&gt;</pre>
+				</li>
+				<li>
+					Третий способ &#8212; просто написать метатеги, как они должны быть на странице.
+				</li>
+			</ul>		
+		</p>
+		<p>
+			О <strong>PHP-генераторе.</strong> Тут все просто. Пишем произвольную функцию, которая возвращает содержимое
+			в виде строки. Функция должна находиться в глобальном пространстве имен (то есть, не должна содержаться внутри
+			какого-либо класса, другой функции или где-то еще). Файл с функцией подключаем к <code>/index.php</code> с
+			помощью <code>include</code>/<code>include_once</code>, вписываем название функции в поле &quot;PHP-генератор&quot;.
+			Теперь вместо содержимого страницы будет выводиться то, что выдает наша функция.
+		
+		</p>
+	</div>
+</div>

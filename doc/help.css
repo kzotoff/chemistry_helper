@@ -1,0 +1,166 @@
+/*** commons *****************************************************************/
+* {
+	margin              : 0px;
+	padding             : 0px;
+	box-sizing          : border-box;
+}
+
+body {
+	font-family         : tahoma, verdana;
+	background-color    : white;
+	padding             : 0rem 1rem 1rem 1rem;
+}
+
+a {
+	color               : #45a;
+}
+
+ul {
+	margin-left         : 2rem;
+}
+
+ul>li {
+	list-style-image    : url('bullet.gif');
+	margin              : 0.4rem 0rem;	
+}
+
+ol>li {
+	list-style-position : inside;
+}
+
+li.alert-sign {
+	list-style-image    : url('alarm.gif');
+}
+
+pre {
+	margin              : 1em;
+	border              : 1px #ccc dashed;
+	border-radius       : 5px;
+	padding             : 4px;
+	background-color    : #eee;
+}
+
+code {
+	white-space         : pre;
+}
+
+h3 {
+	margin              : 1rem 0rem 0.5rem 1rem;
+}
+
+/*** folding articles ********************************************************/
+.article {
+	clear               : both;
+}
+
+.article-head {
+	font-size           : 1.2em;
+	border-bottom       : 1px #999 dashed;
+	padding             : 0px 4px;
+	display             : inline-block;
+	margin              : 0.5rem;
+	cursor              : pointer;
+}
+
+.article-head:hover {
+	background-color    : #bce;
+}
+
+.article-text {
+	display             : none;
+	position            : relative;
+}
+
+.article-text * {
+	line-height         : 1.7em;
+}
+
+.article.visible .article-text {
+	display             : block;
+}
+
+
+/*** buttons that looks like admin-panel buttons *****************************/
+span.like-admin-box {
+	display             : inline-block;
+	padding             : 0em 0.6em; 
+	margin              : 0.5em 0.5em; 
+	border-width        : 0px;
+	cursor              : pointer;
+	color               : white;
+	background-color    : #777;
+	font-weight         : bold;
+	font-family         : tahoma;
+	text-decoration     : none;
+	vertical-align      : middle;
+}
+
+span.like-admin-box:hover {
+	background-color    : #aaf;	
+}
+
+
+/*** pictures with over-text *************************************************/
+.article .article-text .pic-with-text {
+	position            : relative;
+	margin              : 1rem;
+	box-shadow          : 0px 0px 5px 5px gray;
+}
+
+.article .article-text .pic-text {
+	position            : absolute;
+	color               : black;
+	box-shadow          : 0px 0px 6px 6px #ccd9ee;
+	padding-left        : 3px;
+	font-size           : 0.9em;
+	font-weight         : bold;
+	line-height         : 1.3em;
+}
+
+.article .article-text .pic-text-back {
+	position            : absolute;
+	left                : 0px;
+	top                 : 0px;
+	width               : 100%;
+	height              : 100%;
+	opacity             : 0.2;
+	background-color    : #04a;
+}
+
+/*** "go to index" button ****************************************************/
+.top-right {
+	position            : fixed;
+	right               : 1em;
+	top                 : 1em;
+	color               : black;
+	z-index             : 2000;
+	box-shadow          : 0px 0px 8px 8px white;
+}
+
+/*** "start page links are big ***********************************************/
+.big-link {
+	color               : #333;
+	font-size           : 1.2em;
+	line-height         : 1.8em;
+	padding             : 3px;
+}
+
+a.big-link {
+	text-decoration     : none;	
+}
+
+.big-link:hover {
+	background-color    : #bce;
+	color               : black;
+}
+
+/*** special elements ********************************************************/
+.show-me-button {
+	border              : 1px gray dashed;
+	border-radius       : 3px;
+	background-color    : #ccc;
+	display             : inline-block;
+	line-height         : 1.4em;
+	padding             : 0px 4px;
+	cursor              : pointer;
+}

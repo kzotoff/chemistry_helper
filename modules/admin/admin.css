@@ -1,0 +1,193 @@
+/*****************************************************************************/
+/** settings dialog **********************************************************/
+/*****************************************************************************/
+
+.settings-form {
+	width: 60rem;
+}
+
+/* make settings tree structure properly padded */
+.settings-dialog-node {
+	padding: 0.5em 0rem 0.5rem 2rem;
+	border: 0px blue solid;
+	position: relative;
+}
+
+.settings-form label {
+	display: inline-block;
+	text-align: right;
+	padding-right: 1rem;
+}
+
+/* crazy alignment */
+.settings-form .input-container {
+	width : 30rem;
+	display: inline-block;
+	position: absolute;
+	right: 0rem;
+	top: 0rem;
+}
+
+.settings-form input {
+	width: 100%;
+}
+.settings-form input:focus {
+	padding-right: 75px;
+}
+
+/* save/revert buttons */
+.input-container .btn {
+	position: absolute;
+	top: 2px;
+}
+
+.input-container #settings_box_button_save {
+	right: 2px;
+}
+
+.input-container #settings_box_button_revert {
+	right: 38px;
+}
+
+/* special classes for "saving" and "modified" states */
+.input-waiter {
+	background-image: url('images/loadingbar.gif');
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.input-container .modified {
+	background-image: url('images/save_question.gif');
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+
+
+/*************************************************************************************************/
+/*** admin buttons panel *************************************************************************/
+/*************************************************************************************************/
+
+/* pad content to the same height */
+.admin-box-padder { width: 100%; height: 2.5em; }
+
+/* ok, glue panel to the top */
+@keyframes admin-panel-visible {
+	0% { top: -1.8em; }
+	100% { top: 0px; }
+}
+.admin-box-main {
+	position: fixed;
+	top: -1.8em; 
+	left: 0px;
+	min-height: 2.5em;
+	width: 100%;
+	line-height: 1.5em;
+	font-size: 1em;
+	background-color: #000;
+	z-index: 900;
+	text-align: left;
+}
+
+.admin-box-main:hover {
+	animation-name: admin-panel-visible;
+	-o-animation-name: admin-panel-visible;
+	animation-duration: 0.25s;
+	-o-animation-duration: 0.25s;
+	animation-direction: normal;
+	-o-animation-direction: normal;
+	animation-fill-mode: forwards;
+	-o-animation-fill-mode: forwards;
+}
+
+/* it can be nearly invisible */
+div.admin-box-transparent {
+	opacity: 0.15;
+}
+div.admin-box-transparent:hover {
+	opacity: 1;
+}
+
+/* buttons */
+.admin-box-main a {
+	display: inline-block;
+	padding: 0em 0.6em;
+	margin: 0.5em 0.5em;
+	border-width: 0px;
+	cursor: pointer;
+	color: white;
+	background-color: #777;
+	font-weight: bold;
+	font-family: tahoma;
+	text-decoration: none;
+	vertical-align: middle;
+}
+
+div.admin-box-main a:hover {
+	background-color: #aaf;
+}
+
+/* current module button */
+.admin-box-main a.active-button {
+	background-color: #77c;
+}
+
+/* some buttons are at the right side (help, settings, logout) */
+.admin-box-main a.button-right {
+	float: right;
+}
+
+/*****************************************************************************/
+/*** unified admin pages styling *********************************************/
+/*****************************************************************************/
+
+/* wrapper for the entire admin page */
+.admin-content {
+	padding: 0em 1em;
+}
+
+.admin-buttons>* {
+	display : inline-block;
+	margin: 1em;
+}
+.admin-buttons>* * {
+	margin: 0.4em;
+}
+
+/* inline buttons */
+.unified-table tr .row-inline-button {
+	margin: 3px 2px;
+	visibility: hidden;
+	cursor: pointer;
+	padding: 2px 3px;
+	text-align: center;
+	border: 1px transparent solid;
+}
+
+.unified-table tr:hover .row-inline-button {
+	visibility: visible;
+}
+.unified-table .row-inline-button:hover {
+	border: 1px #999 solid;
+}
+
+/* special margin for dangerous button */
+.unified-table.row-inline-button[data-button-action="delete"] {
+	margin-left: 8px;
+	margin-right: 8px;
+}
+
+.unified-table .row-inline-button:hover {
+	background-color: #ccc;
+}
+
+.unified-table tbody tr:hover {
+	background-color: rgba(200,200,200,0.4);
+}
+
+/* drop-down lists group divider */
+.select_divider {
+	font-weight         : bold !important;
+	background-color    : #aaa;
+	color               : white;
+}
+

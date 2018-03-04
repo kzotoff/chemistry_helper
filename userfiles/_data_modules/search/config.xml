@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<JuliaCMS_module_definition>
+	<version caption="Версия">1.0</version>
+	<comment caption="Описание">Поиск</comment>
+	<main_script>func.php</main_script>
+	<class_name>J_Search</class_name>
+	<css>css.css</css>
+	<admin_caption>search</admin_caption>
+	<config caption="Настройка:">
+		<chars_to_include caption="Знаков рядом с совпадением">60</chars_to_include>
+		<wrap_tag caption="Тег для выделения">b</wrap_tag>
+	</config>
+</JuliaCMS_module_definition>

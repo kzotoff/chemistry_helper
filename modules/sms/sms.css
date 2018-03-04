@@ -1,0 +1,22 @@
+.sms-sender-gauge-dialog {
+	height: 500px;
+	width: 600px;
+}
+
+.sms-sender-log {
+	height: 480px;
+	width: 600px;
+}
+
+.sms-sender-gauge {
+	height: 20px;
+	width: 600px;
+	background-color : white;
+	border: 1px #ccc solid;
+}
+
+.sms-sender-gauge-inner {
+	width: 0%;
+	height: 20px;
+	background-color : blue;
+}

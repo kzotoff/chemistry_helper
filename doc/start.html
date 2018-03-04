@@ -1,0 +1,109 @@
+<div class="article">
+	<div class="article-head">Как устроена эта система</div>
+	<div class="article-text">
+		Система состоит всего из двух основных элементов:
+		<ul>
+			<li>
+				<strong>Общий шаблон сайта:</strong> включает в себя общую часть всех страниц сайта.
+				Обычно он состоит из нескольких <em>фиксированных</em> элементов &#8212; &quot;шапки&quot;,
+				нижней части (&quot;футера&quot;), различных декоративных элементов. Кроме этого, в шаблоне
+				указывается, где будут расположены различные меню, содержимое, счетчики, новости и прочие
+				<em>изменяющиеся</em> элементы.
+			</li>
+			<li>
+				<strong>Обрабатывающие модули</strong>, которые могут видоизменять исходный шаблон. Для
+				этого в шаблоне используются специальные пометки, которые сообщают модулю о необходимости
+				выполнить то или иное действие &#8212; вставить текст странички, отобразить в этом месте
+				меню или что-то еще. В этом руководстве такие пометки называются &quot;<em>макросы</em>&quot;.
+			</li>
+		</ul>
+		Работает все это очень просто. Исходный шаблон проходит обработку последовательно каждым модулем,
+		и то, что получается в результате, увидит посетитель сайта.
+	</div>
+</div>
+
+<div class="article">
+	<div class="article-head">Элементы управления</div>
+	<div class="article-text">
+		<p>
+			Черная полоска сверху с кнопками &#8212; панель администрирования
+			<button class="show-me-button" data-flash-item=".admin-box-main">не вижу</button>
+		</p>
+		<p>На ней есть следующие кнопки:</p>
+		<ul>
+			<li>
+				администрирования модулей <button class="show-me-button" data-flash-item="[data-button-action=&quot;module-admin&quot;]">показать</button>.
+				Если нажать одну из этих кнопок, попадем на страницу управления модулем &#8212; для модуля содержимого
+				увидим список имеющихся страниц сайта, для модуля новостей &#8212; список новостей и так далее.
+			</li>
+			<li>
+				редактирования текущей страницы <button class="show-me-button" data-flash-item="[data-button-action=&quot;edit-page&quot;]">вот она</button>.
+				Если вы уже редактируете страницу, там будут кнопки сохранения и отмены
+				(<button class="show-me-button" data-flash-item="[data-button-action=&quot;edit-page-save&quot;]">вот такие</button>). Если же вы
+				работаете с каким-то модулем, там будет кнопка для возврата в режим просмотра
+				<button class="show-me-button" data-flash-item="[data-button-action=&quot;edit-return&quot;]">как выглядит?</button>.
+			</li>
+			<li>
+				настройки параметров системы <button class="show-me-button" data-flash-item="[data-button-action=&quot;admin-module-cms-config&quot;]">показать</button>
+			</li>
+			<li>
+				настройки выбранного модуля (видна, если мы находимся в режиме администрирования модуля)
+				<button class="show-me-button" data-flash-item="[data-button-action=&quot;admin-module-settings&quot;]">показать</button>
+			</li>
+			<li>
+				вызова справки <button class="show-me-button" data-flash-item="[data-button-action=&quot;admin-module-help&quot;]">;-)</button>
+			</li>
+			<li>
+				выхода из режима администрирования <button class="show-me-button" data-flash-item="[data-button-action=&quot;admin-quit&quot;]">...</button>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="article">
+	<div class="article-head">Параметры CMS</div>
+	<div class="article-text">
+		<p>Эти настройки регулируют работу основной системы, и не влияют на работу модулей.</p>
+		<p>
+			Чтобы изменить значение параметра (как здесь, так и в диалогах настройки модулей), введите
+			желаемое значение в поле и нажмите кнопку
+			<span class="btn btn-xs btn-primary glyphicon glyphicon-ok" style="vertical-align: text-bottom;"></span>.
+			Кнопка <span class="btn btn-xs btn-primary glyphicon glyphicon-repeat" style="vertical-align: text-bottom;"></span>
+			сбрасывает значение поля на исходное.
+		</p>
+		<table class="table table-bordered">
+			<tr>
+				<td>Пароль администратора</td>
+				<td>Пароль, который нужно ввести, чтобы попасть к страницам администрирования</td>
+			</tr>
+			<tr>
+				<td>Страница по умолчанию</td>
+				<td>
+					<a href="help.php?path=content#pageprops">Псевдоним</a> страницы, которая будет показана,
+					если введен адрес вида <code>http://site.com/</code> (без указания страницы)
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<div class="article">
+	<div class="article-head">И как с этим всем работать?</div>
+	<div class="article-text">
+		<p>
+			Во-первых, нужен сверстанный шаблон сайта (уже не рисунок, но еще не полноценный сайт).
+		</p>
+		<p>
+			Второе, что нам понадобится &#8212; <a href="help.php?path=filemanager">файловый менеджер</a>. С его помощью
+			нужно <a href="help.php?path=filemanager#faq">отредактировать</a> файл <code>template.html</code> и поместить
+			туда сверстанный шаблон.
+		</p>
+		<p>
+			Теперь у нас есть что-то, похожее на сайт, но нет содержимого. Но уже понятно, где оно будет находиться.
+			Редактируем шаблон (все тем же файловым менеджером), и туда, где будет располагаться содержимое, вписываем такой макрос:
+			<pre>[macro type="content" /]</pre>
+			<img src="help.php?proxy=warning.gif" alt="note-this" />&#160;Косая черта в конце обязательна.
+		</p>
+		<p>Отлично, теперь нам нужно создать страницу. Следуем <a href="help.php?path=content#creating-page" alt="content">сюда</a>.</p>
+	</div>
+</div>

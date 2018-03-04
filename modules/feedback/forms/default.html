@@ -1,0 +1,33 @@
+<form id="feedback_form" class="form-vertical" action="./" method="post">
+	<input name="module" type="hidden" value="feedback" />
+	<input name="action" type="hidden" value="send" />
+	<input name="template" type="hidden" value="default" />
+	<input name="recipient" type="hidden" value="default" />
+	
+	<div class="form-group">
+		<label for="feedback-name">Имя:</label>
+		<input id="feedback-name" class="form-control" name="feedback_name" type="text" />
+	</div>
+	
+	<div class="form-group">
+		<label for="feedback-address">Адрес:</label>
+		<input id="feedback-address" class="form-control" name="feedback_address" type="text" />
+	</div>
+	
+	<div class="form-group">
+		<label for="feedback-phone">Телефон:</label>
+		<input id="feedback-phone" class="form-control" name="feedback_phone" type="text" />
+	</div>
+	
+	<div class="form-group">
+		<label for="feedback-email">Электронная почта:</label>
+		<input id="feedback-email" class="form-control" name="feedback_email" type="text" />
+	</div>
+	
+	<div class="form-group">
+		<label for="feedback-message">Ваше сообщение:</label>
+		<textarea id="feedback-message" class="form-control" name="feedback_message" rows="7"></textarea>
+	</div>
+	
+	<input class="btn btn-primary" type="submit" value="Отправить" />
+</form>

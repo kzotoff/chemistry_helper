@@ -1,0 +1,9 @@
+tables:
+	files:
+		id - object GUID
+		name - filename as saved for files, alias for folders
+			alias is specified by user, numeric by order if not set
+		type - 1 for folders, 0 for files
+		parent_id - parent folder GUID
+		caption - human-readable caption
+		

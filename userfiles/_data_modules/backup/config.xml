@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<JuliaCMS_module_definition>
+	<version caption="Версия">1.0</version>
+	<comment caption="Описание">Резервное копирование</comment>
+	<main_script>func.php</main_script>
+	<class_name>J_Backup</class_name>
+	<css/>
+	<js/>
+	<admin_caption>backup</admin_caption>
+	<admin_css type="array">
+		<filename>admin.css</filename>
+	</admin_css>
+	<admin_js type="array">
+		<filename>admin.js</filename>
+	</admin_js>
+	<disabled>false</disabled>
+	<break_after>false</break_after>
+	<config caption="Настройка:">
+		<backup_list type="array" caption="Список для сохранения">
+			<filename caption=" ">userfiles/_data_common/cms.sqlite</filename>
+			<filename caption=" ">userfiles/_data_modules/db/db.sqlite</filename>
+			<filename caption=" ">data/cms.sqlite</filename>
+			<filename caption=" ">userfiles/css/*.*</filename>
+			<filename caption=" ">userfiles/files/*.*</filename>
+			<filename caption=" ">userfiles/images/*.*</filename>
+			<filename caption=" ">userfiles/images/gallery/*.*</filename>
+			<filename caption=" ">userfiles/images/gallery/preview/*.*</filename>
+			<filename caption=" ">userfiles/js/*.*</filename>
+			<filename caption=" ">userfiles/pages/*.*</filename>
+			<filename caption=" ">userfiles/xsl/*.*</filename>
+		</backup_list>
+	</config>
+</JuliaCMS_module_definition>

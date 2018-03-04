@@ -1,0 +1,51 @@
+/* menu tree *************************************************************************************/
+.admin_menu_tree ul, .admin_menu_tree li, .admin_menu_tree span {
+	border              : 0px gray solid;
+	padding-right       : 0px;
+	margin-right        : 0px;
+}
+
+.admin_menu_tree li {
+	margin-left         : 2em;
+	list-style          : none;
+}
+
+.admin_menu_tree li span {
+	padding             : 3px 0px 3px 3px;
+	display             : inline-block;
+	width               : 100%;
+}
+
+.admin_menu_tree li span:hover {
+	background-color    : #ddd;
+}
+
+ .mod-menu-item-orphan {
+	color: red;
+}
+.admin_menu_tree li span .actionboard {
+	padding             : 0px;
+	float               : right;
+	margin-right        : 5px;
+	width               : auto;
+	display             : none;
+}
+.admin_menu_tree li span .actionboard a {
+	cursor              : pointer;
+	margin              : 0px 3px;
+}
+
+.admin_menu_tree li span:hover .actionboard {
+	display             : inline-block;
+}
+
+/* special margin for "delete" button */
+.menu_sb_btn_delete {
+	margin-left         : 1em;
+}
+
+/* root-level elements in selectors */
+.menu-item-select-top-level {
+	background-color    : #def;
+	font-weight         : bold;
+}

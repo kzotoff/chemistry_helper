@@ -1,0 +1,82 @@
+<h3>Файловый менеджер</h3>
+
+<div class="article"id="general">
+	<div class="article-head">Общее описание</div>
+	<div class="article-text">
+		<p>Модуль предназначен для управления пользовательскими файлами - страницами, таблицами стилей, скриптами и прочими полезными штуками.</p>
+		<p>Чтобы поуправлять файлами, нужно выбрать категорию и нажать кнопку &quot;Перейти&quot;</p>
+		<p>
+			В каждую категорию можно добавить файл (только с подходящим расширением) и удалить
+			( <img src="help.php?path=filemanager&proxy=redcross.gif" alt="icon" /> ) уже существующий.
+			В категориях, содержащих текстовые файлы (стили, скрипты, страницы) их можно редактировать
+			( <img src="help.php?path=filemanager&proxy=pencil.gif" alt="icon" /> ). Можно также переименовать
+			файл или переместить в другую категорию, для этого нужно в поле &quot;имя файла&quot; ввести новый
+			полный путь к файлу. Файл будет перемещен только при условии, что новое расширение подходит для
+			нужной категории (то есть, скрипт с расширением .js нельзя положить в папку с таблицами стилей, только .css). 
+		</p>
+	</div>
+</div>
+
+<div class="article" id="directories">
+	<div class="article-head">Список каталогов</div>
+	<div class="article-text">
+		<p>В следующих каталогах можно управлять файлами (как они представлены в административной части модуля в стандартной поставке):</p>
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>Каталог</th>
+					<th>Описание</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr><td>CSS</td><td>таблицы стилей, которые можно применять к страницам</td></tr>
+				<tr><td>scripts</td><td>скрипты на языке javascript</td></tr>
+				<tr><td>images</td><td>изображения</td></tr>
+				<tr><td>pages</td><td>собственно основной контент сайта</td></tr>
+				<tr><td>XSL stylesheets</td><td>XSL-трансформации, которые можно применять к страницам.</td></tr>
+				<tr><td>Main files</td><td>основные файлы сайта&#160;&#8212; шаблон и таблица стилей</td></tr>
+				<tr><td>files</td><td>различные файлы, предназначенные для загрузки пользователями</td></tr>
+				<tr><td>trash</td><td>корзина. Сюда попадают удаленные страницы</td></tr>
+			</tbody>
+		</table>
+		<p>Кроме того, модули могут добавлять в этот список свои каталоги.</p>
+	</div>
+</div>
+
+<div class="article" id="faq">
+	<div class="article-head">Популярные задачи</div>
+	<div class="article-text">
+		<p>
+			<h4>Редактирование основного шаблона сайта</h4>
+			<div class="pic-with-text" style="float: right; margin-top: -5em;">
+				<img src="help.php?path=filemanager&amp;proxy=categories.png" alt="" />			
+			</div>
+			<ol>
+				<li>Открываем файловый менеджер.</li>
+				<li>Выбираем категорию &quot;Main files&quot;, нажимаем кнопку <button class="btn btn-default btn-xs">Перейти</button>.</li>
+				<li>В появившемся списке наводим мышку на <code>template.html</code> и кликаем на кнопке редактирования ( <img src="help.php?path=filemanager&proxy=pencil.gif" alt="icon" /> ).</li>
+				<li>В открывшемся диалоговом окне видим исходный код основного шаблона сайта и можем вносить изменения.</li>
+				<li>После того, как изменения внесены, жмем кнопку <button class="btn btn-primary btn-xs">Сохранить</button></li>
+			</ol>
+		</p>
+	</div>
+</div>
+
+<div class="article">
+	<div class="article-head">Технические вопросы</div>
+	<div class="article-text">
+		<p><strong>javascript:</strong> в стандартном комплекте уже есть <strong>jQuery</strong>, <strong>jQueryUI</strong>, <strong>jQuery.tablesorter</strong>.</p>
+		<p><strong>CSS:</strong> уже подключен <strong>bootstrap</strong> (только CSS, скриптовая часть отсутствует).</p>
+		<p><strong>картинки:</strong> допустимые форматы: jpeg, png, gif.</p>
+		<p><strong>страницы:</strong> есть некоторое количество зарезервированных названий:
+			<ul>
+				<li>
+					<strong>service_feedback_ok</strong> и <strong>service_feedback_failed</strong>: модуль обратной связи будет переходить на эти
+					страницы при успешной и неуспешной отправке сообщения. Соответственно, эти страницы необходимо создать.
+				</li>
+			</ul>
+		</p>
+		<p><strong>XSL:</strong> ошибки трансформации не отслеживаются, выверяйте XML тщательно!</p>
+		<p><strong>файлы:</strong> из этого каталога файлы выдаются пользователю без специальной обработки, &quot;как есть&quot;, MIME-тип будет определяться сервером.</p>
+	</div>
+</div>

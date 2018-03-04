@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<JuliaCMS_module_definition>
+	<version caption="Версия">1.0</version>
+	<comment caption="Описание">Администрирование</comment>
+	<main_script>func.php</main_script>
+	<css>admin.css</css>
+	<js>admin.js</js>
+	<class_name>J_Admin</class_name>
+</JuliaCMS_module_definition>

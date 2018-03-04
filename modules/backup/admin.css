@@ -1,0 +1,43 @@
+div[data-module="backup"] {
+	width               : 600px;
+}
+
+div[data-module="backup"] .empty-table {
+	margin              : 2rem;
+}
+
+div[data-module="backup"] table {
+	background-color    : white;
+}
+
+div[data-module="backup"] table td {
+	position            : relative;
+}
+
+div[data-module="backup"] .backup-in-table-buttons {
+	position            : absolute;
+	top                 : 7px;
+	right               : 5px;
+}
+
+div[data-module="backup"] .backup-in-table-buttons input {
+	margin              : 0px 5px;
+	visibility          : hidden;
+}
+
+div[data-module="backup"] tr:hover .backup-in-table-buttons input {
+	visibility          : visible;
+}
+
+div[data-module="backup"] .td_filename {
+	text-align          : left;
+}
+
+div[data-module="backup"] .td_filesize {
+	text-align          : right;
+	padding-right       : 5px;
+}
+
+div[data-module="backup"] .td_description {
+	text-align          : left;
+}

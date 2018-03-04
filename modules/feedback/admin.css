@@ -1,0 +1,13 @@
+/* adder form */
+#module-feedback-add-name {
+	width: 20em; 
+}
+
+/* editor dialog */
+.edit-dialog-buttons {
+	text-align: right;
+}
+
+.edit-dialog-buttons .btn {
+	margin: 0.6em;
+}

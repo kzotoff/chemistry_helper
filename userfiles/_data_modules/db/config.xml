@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<JuliaCMS_module_definition>
+	<version caption="Версия">1.0</version>
+	<comment caption="Описание">Работа с БД</comment>
+	<main_script>func.php</main_script>
+	<class_name>J_DB</class_name>
+	<css>
+		<elem>css/db.css</elem>
+		<elem>css/comments.css</elem>
+		<elem>css/confirm.css</elem>
+		<elem>css/editorial.css</elem>
+		<elem>css/simpletablesorter.css</elem>
+	</css>
+	<js>
+		<elem>js/storage.js</elem>
+		<elem>js/db.js</elem>
+		<elem>js/editorial.js</elem>
+		<elem>js/commentbox.js</elem>
+		<elem>js/confirmationbox.js</elem>
+		<elem>js/jquery.simpletablefilter.js</elem>
+		<elem>js/jquery.simpletablesorter.js</elem>
+		<elem>js/jquery.simpletablesearch.js</elem>
+		<elem>js/jquery.simplecolumnresize.js</elem>
+	</js>
+	<admin_caption>db</admin_caption>
+	<config caption="Настройка:">
+		<server_driver caption="Драйвер" type="select">
+			<value>sqlite</value>
+			<possible>
+				<option value="sqlsrv">Microsoft SQL server</option>
+				<option value="sqlite">SQLite</option>
+				<option value="mysql">MySQL</option>
+			</possible>
+		</server_driver>
+		<server_host caption="Хост/файл">userfiles/_data_modules/db/db.sqlite</server_host>
+		<server_login caption="Логин"></server_login>
+		<server_password caption="Пароль"></server_password>
+		<server_db_name caption="База данных"></server_db_name>
+		<context_menu_button caption="Контекстное меню" type="select">
+			<value>right</value>
+			<possible>
+				<option value="left">Левая кнопка мыши</option>
+				<option value="right">Правая кнопка мыши</option>
+			</possible>
+		</context_menu_button>
+	</config>
+</JuliaCMS_module_definition>

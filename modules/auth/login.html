@@ -1,0 +1,68 @@
+	<div class="login-form-outer">
+	<div class="login-form-middle">
+	<div class="login-form-inner">
+	
+	<div class="login_form_wrapper">
+		<form action="auth.php" method="post" id="loginform" class="form-horizontal">
+		
+			<div class="login-form-logo">
+				<img src="userfiles/template/images/logo.png" alt="logo" />
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="username">Логин</label>
+				<div class="col-sm-10"><input type="text" name="username" id="username" class="form-control" autofocus="autofocus"></div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="password">Пароль</label>
+				<div class="col-sm-10"><input type="password" name="password" id="password" class="form-control"></div>
+			</div>
+<!--			
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="rememberme"></label>
+				<label class="control-label col-sm-10" for="rememberme">
+					<input type="checkbox" name="rememberme" id="rememberme" class="form-control">
+					запомнить
+				</label>
+			</div>
+-->
+			<div class="form-group buttons">
+				<input type="submit" value="Войти" class="btn btn-primary" id="login_button" />
+			</div>
+			<div class="login_messagebox_outer">
+				<div id="login_messagebox" class="label">
+					<img src="images/loadingbar.gif" alt="loading" />
+				</div>
+			</div>
+		</form>
+	</div>
+
+	</div>
+	</div>
+	</div>
+
+	<script type="text/javascript">
+		$(function() {
+			$('input[name="username"]').focus();
+			$('#loginform').submit(function(event) {
+				event.preventDefault();
+				$('#login_messagebox').html('<img src="images/loadingbar.gif" alt="loading" />');
+				$('#login_messagebox').removeClass('login_messagebox_error').addClass('login_messagebox_waiting');
+				$('#login_messagebox').fadeIn(100, 'linear');
+				$.post(
+					'.?ajaxproxy=auth&action=login',
+					{ username: $('#username').val(), password: $('#password').val(), remebmerme: $('#rememberme').val() },
+					function(data, status) {
+						if (data.substr(0,2) == 'OK') {
+							location.href='.';
+							return;
+						}
+
+						$('#login_messagebox').removeClass('login_messagebox_waiting').addClass('login_messagebox_error');
+						$('#login_messagebox').html(data.substr(3));
+						setTimeout(function() { $('#login_messagebox').fadeOut('fast', 'linear'); }, 3000);
+					});
+			});
+		});
+	</script>
+	
+	

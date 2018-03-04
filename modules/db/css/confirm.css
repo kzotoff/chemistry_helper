@@ -1,0 +1,12 @@
+.confirmation-box-outer-wrapper {
+	text-align          : center;
+}
+.confirmation-box-outer-wrapper .confirmation-box-text {
+	margin              : 1rem;
+	text-align          : center;
+}
+
+.confirmation-box-outer-wrapper .btn {
+	margin-left         : 5px;
+	margin-right        : 5px;
+}

@@ -1,0 +1,11 @@
+.simplesorter-sorted {
+	background-position: right center;
+	background-repeat: repeat-y;
+}
+
+.simplesorter-asc {
+	background-image: url('../images/simplesorter_asc.png');
+}
+.simplesorter-desc {
+	background-image: url('../images/simplesorter_desc.png');
+}

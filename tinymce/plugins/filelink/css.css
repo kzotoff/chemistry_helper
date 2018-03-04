@@ -1,0 +1,91 @@
+* {
+	font-family         : verdana, tahoma, arial;
+	margin              : 0px;
+	padding             : 0px;
+	box-sizing          : border-box;
+}
+
+body {
+	padding             : 1em;
+}
+
+.container {
+	width               : 98%;
+	margin              : 1em 0em;
+}
+
+input[type="text"]:focus, input[type="file"]:focus {
+	box-shadow          : 0px 0px 5px 0px #0af;
+}
+
+input[type="text"], input[type="file"], input[type="button"], input[type="submit"] {
+	border              : 1px #bbb solid;
+	height              : 2.2em;
+	border-radius       : 3px;
+	padding             : 3px;
+}
+
+input[type="button"], input[type="submit"] {
+	background-color    : #ccc;
+}
+
+.container-caption {
+	display             : block;
+	margin              : 1em 0em 0.5em 0.5em;
+	font-size           : 1.1em;
+}
+
+.add-file-container input[type="file"] {
+	width               : 83%;
+	vertical-align      : middle;
+}
+
+.add-file-container input[type="submit"] {
+	width               : 14%;
+	vertical-align      : middle;
+}
+
+.list-container {
+	margin-top          : 1.6em;
+	border-top          : 1px #aaa solid;
+}
+
+.list-container table {
+	border-collapse     : collapse;
+	table-layout        : fixed;
+	width               : 100%;
+}
+
+.list-container table td {
+	border              : 1px #ddd solid;
+	padding             : 3px;
+	overflow            : hidden;
+	vertical-align      : middle;
+}
+
+.list-container table tr {
+	height              : 32px;
+}
+
+.list-container table td:first-child {
+	width               : 24px;
+	text-align          : center;
+}
+
+.list-container table td:last-child {
+	text-align          : left;
+}
+
+.list-container table td:last-child img {
+	vertical-align      : middle;
+}
+
+.table-container {
+	max-height          : 177px;
+	overflow            : auto;
+	border              : 1px #ddd solid;
+}
+
+.link-text-container input {
+	width               : 100%;
+}

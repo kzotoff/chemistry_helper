@@ -1,0 +1,4 @@
+/* page defined as default in conf.php */
+tr[data-default-page="yes"] {
+	font-weight: bold;
+}

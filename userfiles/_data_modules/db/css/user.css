@@ -1,0 +1,40 @@
+.sim-compare {
+}
+
+.sim-compare .sim-compare-v-scroller {
+	width: 70em;
+	height: 500px;
+	overflow-y: auto;
+}
+
+.sim-compare .sim-compare-v-scroller>div {
+	display: inline-block;
+	vertical-align: top;
+}
+.sim-compare .sim-compare-reference {
+	width: 30em;
+}
+	.sim-compare .sim-compare-reference .sim-reference-header {
+		display: inline-block;
+		width: 13em;
+		font-weight: bold;
+	}
+.sim-compare .sim-compare-tests {
+	width: 38em;
+	overflow-x: scroll;
+}
+
+.sim-compare .sim-compare-tests-inner>div {
+	display: inline-block;
+	width: 16em;
+}
+
+.sim-compare .sim-compare-data>div {
+	border-top: 1px #ccc solid;
+	overflow: hidden;
+	height: 1.5em;
+	white-space: nowrap;
+}
+.sim-compare .sim-compare-tests-inner .sim-compare-data>div {
+	border-left: 1px #ccc solid;
+}

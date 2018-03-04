@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<JuliaCMS_module_definition>
+	<version caption="Версия">1.0</version>
+	<comment caption="Описание">Обратная связь</comment>
+	<main_script>func.php</main_script>
+	<css>css.css</css>
+	<js>js.js</js>
+	<class_name>J_Feedback</class_name>
+	<admin_caption>feedback</admin_caption>
+	<admin_css>admin.css</admin_css>
+	<admin_js>admin.js</admin_js>
+	<config caption="Настройка:">
+		<transport caption="Отправка сообщений">
+			<type caption="Тип (SMTP или sendmail)">smtp</type>
+			<server caption="Сервер"></server>
+			<port caption="Порт"></port>
+			<auth caption="Тип аутентификации">plain</auth>
+			<username caption="Логин"></username>
+			<password caption="Пароль"></password>
+			<localhost caption="Строка приветствия"></localhost>
+			<from caption="Обратный адрес"></from>
+			<debug caption="Режим отладки">0</debug>
+		</transport>
+		<addresses caption="Адреса получателей">
+			<default></default>
+			<service></service>
+		</addresses>
+		<default_subject caption="Тема по умолчанию">Новое сообщение с сайта</default_subject>
+	</config>
+</JuliaCMS_module_definition>

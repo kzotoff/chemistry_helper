@@ -1,0 +1,10 @@
+.admin_edit_form {
+	width: 36em;
+}
+
+/* hide "go to page" button when no linked page */
+.news-single-row[data-page=""] *[data-action="edit-page"] {
+	visibility : hidden;
+}
+
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<JuliaCMS_module_definition>
+	<version caption="Версия">1.0</version>
+	<comment caption="Описание">Управление новостями</comment>
+	<main_script>func.php</main_script>
+	<class_name>J_News</class_name>
+	<admin_caption>news</admin_caption>
+	<admin_css>admin.css</admin_css>
+	<admin_js>admin.js</admin_js>
+	<config caption="Настройка:">
+		<table caption="Таблица">news</table>
+	</config>
+</JuliaCMS_module_definition>

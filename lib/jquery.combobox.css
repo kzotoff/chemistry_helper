@@ -1,0 +1,38 @@
+/* sample from jQuery autocomplete demo */
+
+.custom-combobox {
+	position: relative;
+
+	display: block;
+	width: 100%;
+	height: 34px;
+	position: relative;
+}
+.custom-combobox-toggle {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	right: -1px;
+	padding: 0px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+.custom-combobox input.custom-combobox-input {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 5px 10px;
+	background-color: white;
+	border-radius: 3px;
+}
+
+
+ul.ui-autocomplete {
+	max-height: 250px;
+	overflow-y: auto;	
+	overflow-x: hidden;	
+}
+
+.ui-autocomplete li:hover {
+	background-color: #75acff;
+}

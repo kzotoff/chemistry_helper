@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css" />
+	<style type="text/css">
+		* { box-sizing: border-box; }
+		html { width: 100%; height: 100%; display: table; }
+		body { width: 100%; height: 100%; display: table-cell; text-align: center; vertical-align: middle; }
+		h3 { margin: 1em; }
+		form { width: 40rem; margin: 0px auto; display: inline-block; }
+		form input[type="submit"] { width: 10rem; } 
+	</style>
+</head>
+<body>
+<form action="./" method="post" class="form-horizontal">
+	<h3>Welcome to JuliaCMS</h3>
+	<input type="hidden" name="action" value="checklogin" />
+	<div class="form-group">
+		<label for="login" class="control-label col-sm-3">Login</label>
+		<div class="col-sm-9">
+			<input id="login" class="form-control" type="text" name="userlogin" autofocus="autofocus" />
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="login" class="control-label col-sm-3">Password</label>
+		<div class="col-sm-9">
+			<input id="login" class="form-control" type="password" name="userpassword" />
+		</div>
+	</div>
+	<div class="btn-group">
+		<input type="submit" value="ОК" class="btn btn-primary" />
+	</div>
+</form>
+</body>
+</html>

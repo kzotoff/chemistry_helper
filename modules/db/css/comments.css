@@ -1,0 +1,86 @@
+/*************************************************************/
+/*** comments popup box **************************************/
+/*************************************************************/
+
+/*** outer box ***********************************************/
+.commentbox-outer-wrapper {
+	width               : 800px;
+	font-size           : 1rem;
+}
+
+/*** print form link *****************************************/
+.commentbox-print-icon {
+	float               : right;
+	padding             : 4px;
+	margin              : 10px;
+}
+
+.commentbox-print-icon img {
+	height              : 16px;
+	width               : 16px;
+}
+
+/*** comment list ********************************************/
+.commentbox-comment-list {
+	height              : 250px;
+	width               : 100%;
+	overflow            : auto;
+}
+
+/*** single comment ******************************************/
+.commentbox-single-header {
+	font-weight         : bold;
+
+}
+
+.commentbox-single-delete-button {
+	cursor              : pointer;
+	vertical-align      : middle;
+	margin              : 3px;
+}
+
+.commentbox-single-object-info {
+
+}
+.commentbox-single-header-stamp {
+	margin-left         : 1em; 
+}
+
+.commentbox-single-text {
+	font-family         : verdana, tahoma, arial, generic;
+	font-size           : 1.3em;
+	margin-bottom       : 10px;
+	white-space         : pre-wrap;
+	word-wrap           : break-word;
+}
+
+.commentbox-single-attached-info {
+	outline             : none;
+	font-weight         : bold;
+	font-size           : 0.9em;
+}
+
+.commentbox-single-attached-info img {
+	vertical-align      : middle;
+	margin              : 3px 3px 3px 7px;
+}
+
+
+/*** add comment area ****************************************/
+div[data-form-name="commentbox-adder-form"] textarea {
+	width               : 100%;
+	padding             : 4px;
+	border-radius       : 4px;
+}
+
+.commentbox-add-file {
+	width               : 100%;
+	margin-bottom       : 5px;
+}
+
+
+/*** buttons *************************************************/
+.comments-dialog-buttons .btn {
+	margin-left         : 5px;
+}
+
