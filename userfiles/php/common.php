@@ -19,3 +19,9 @@ function generate_periodic_table_short() {
 	return XSLTransform($xml->saveXML($xml->documentElement), __DIR__.'/../xsl/periodic_short.xsl');
 
 }
+
+function generate_periodic_json() {
+    module_init('db');
+    $data = CMS::$cache['db']['object']->DB->query('select * from periodic')->fetchAll(PDO::FETCH_ASSOC);
+    return json_encode($data);
+}

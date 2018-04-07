@@ -7,13 +7,26 @@
 	<link rel="shortcut icon" href="favicon.ico">
 </head>
 
+<script>
+    window.data.periodic = [macro type="user-function" function="generate_periodic_json" /]
+</script>
 <body>
 
-<div class="main-menu">
-    [macro type="menu" start-from="main-menu" menu-template="upperbuttons.xsl" /] 
-</div>
+<div class="layout-outer">
 
-[macro type="content" /]
+    <div class="layout-menu">
+        [macro type="menu" start-from="main-menu" menu-template="upperbuttons.xsl" /]
+    </div>
+
+    <div class="layout-content">
+        [macro type="content" /]
+    </div>
+
+    <div class="popup-overlay">
+        <div class="popup-content">
+        </div>
+    </div>
+</div>
 
 </body>
 </html>

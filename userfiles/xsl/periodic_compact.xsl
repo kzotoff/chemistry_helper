@@ -18,31 +18,30 @@
             <col></col>
             <col></col>
             <col></col>
-            <col></col>
         </colgroup>
 
         <tr>
-            <td class="pt-row-caption"></td>
-            <td class="pt-col-caption">I</td>
-            <td class="pt-col-caption">II</td>
-            <td class="pt-col-caption">III</td>
-            <td class="pt-col-caption">IV</td>
-            <td class="pt-col-caption">V</td>
-            <td class="pt-col-caption">VI</td>
-            <td class="pt-col-caption">VII</td>
-            <td class="pt-col-caption" colspan="4">VIII</td>
+            <td class="pt-row-caption"            ><div>      </div></td>
+            <td class="pt-col-caption"            ><div>    I </div></td>
+            <td class="pt-col-caption"            ><div>   II </div></td>
+            <td class="pt-col-caption"            ><div>  III </div></td>
+            <td class="pt-col-caption"            ><div>   IV </div></td>
+            <td class="pt-col-caption"            ><div>    V </div></td>
+            <td class="pt-col-caption"            ><div>   VI </div></td>
+            <td class="pt-col-caption"            ><div>  VII </div></td>
+            <td class="pt-col-caption" colspan="3"><div> VIII </div></td>
         </tr>
     
         <tr>
-            <td class="pt-row-caption">1</td>
+            <td class="pt-row-caption"><div>1</div></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='H']"  /></td>
             <td colspan="6"></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='He']" /></td>
-            <td colspan="3" rowspan="3"></td>
+            <td colspan="2" rowspan="3"></td>
         </tr>
     
         <tr>
-            <td class="pt-row-caption">2</td>
+            <td class="pt-row-caption"><div>2</div></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Li']" /></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Be']" /></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='B']"  /></td>
@@ -54,7 +53,7 @@
         </tr>
     
         <tr>
-            <td class="pt-row-caption">3</td>
+            <td class="pt-row-caption"><div>3</div></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Na']" /></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Mg']" /></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Al']" /></td>
@@ -66,7 +65,7 @@
         </tr>
     
         <tr>
-            <td class="pt-row-caption" rowspan="2">4</td>
+            <td class="pt-row-caption" rowspan="2"><div>4</div></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='K']"  /></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Ca']" /></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Sc']" /></td>
@@ -74,7 +73,6 @@
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='V']"  /></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Cr']" /></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Mn']" /></td>
-            <td class="pt-elem"></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Fe']" /></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Co']" /></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Ni']" /></td>
@@ -88,11 +86,11 @@
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Se']" /></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Br']" /></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Kr']" /></td>
-            <td class="pt-elem" colspan="3"></td>
+            <td class="pt-elem" colspan="2"></td>
         </tr>
     
         <tr>
-            <td class="pt-row-caption" rowspan="2">5</td>
+            <td class="pt-row-caption" rowspan="2"><div>5</div></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Rb']" /></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Sr']" /></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Y']"  /></td>
@@ -100,7 +98,6 @@
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Nb']" /></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Mo']" /></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Tc']" /></td>
-            <td class="pt-elem"></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Ru']" /></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Rh']" /></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Pd']" /></td>
@@ -114,11 +111,11 @@
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Te']" /></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='I']"  /></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Xe']" /></td>
-            <td class="pt-elem" colspan="3"></td>
+            <td class="pt-elem" colspan="2"></td>
         </tr>
     
         <tr>
-            <td class="pt-row-caption" rowspan="2">6</td>
+            <td class="pt-row-caption" rowspan="2"><div>6</div></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Cs']" /></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Ba']" /></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='La']" /></td>
@@ -126,7 +123,6 @@
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Ta']" /></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='W']"  /></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Re']" /></td>
-            <td class="pt-elem"></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Os']" /></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Ir']" /></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Pt']" /></td>
@@ -140,11 +136,11 @@
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Po']" /></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='At']" /></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Rn']" /></td>
-            <td class="pt-elem" colspan="3"></td>
+            <td class="pt-elem" colspan="2"></td>
         </tr>
     
         <tr>
-            <td class="pt-row-caption" rowspan="2">7</td>
+            <td class="pt-row-caption" rowspan="2"><div>7</div></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Fr']" /></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Ra']" /></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Ac']" /></td>
@@ -152,7 +148,6 @@
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Db']" /></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Sg']" /></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Bh']" /></td>
-            <td class="pt-elem"></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Hs']" /></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Mt']" /></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Ds']" /></td>
@@ -166,7 +161,7 @@
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Lv']" /></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Ts']" /></td>
             <td class="pt-elem"><xsl:apply-templates select="item[./sign='Og']" /></td>
-            <td class="pt-elem" colspan="3"></td>
+            <td class="pt-elem" colspan="2"></td>
         </tr>
     </table>
     

@@ -18,6 +18,26 @@ body {
     margin-left: 4px;
 }
 
+/* main layout */
+.layout-outer {
+    width: 100%;
+    height: 100%;
+    padding-top: 44px;
+}
+
+.layout-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 44px;
+}
+
+.layout-content {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
 
 /*****************************************************************************/
 /*****************************************************************************/
@@ -29,12 +49,8 @@ body {
 
 .periodic-table {
     font-family: verdana;
-    position: relative;
-    margin: auto;
     width: 100%;
-    height: 90%;
-    overflow: hidden;
-    padding
+    height: 100%;
 }
 
 /*****************************************************************************/
@@ -60,33 +76,33 @@ body {
 }
 
 .pt-item-sign {
-    font-size: 28px;
+    font-size: 3.4vh;
     font-weight: bold;
     padding-left: 4px;
-    width: 50%;
-    float: left;
+    position: absolute;
+    left: 0.1vh;
+    top: -0.4vh;
 }
 .pt-item-number {
-    font-size: 16px;
+    font-size: 2.4vh;
     font-weight: bold;
-    text-align: right;
-    padding-right: 4px;
-    width: 50%;
-    float: right;
+    position: absolute;
+    right: 4px;
+    top: 0;
 }
 .pt-item-mass {
     font-size: 10px;
-    text-align: right;
-    padding-right: 4px;
-    width: 50%;
-    float: right;
+    position: absolute;
+    right: 3px;
+    top: 3vh;
 }
 .pt-item-title {
     width: 100%;
     padding-left: 8px;
-    font-size: 12px;
-    float: none;
-    clear: both;
+    font-size: 1.8vh;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
 }
 
 /* lantanoids - compact form */
@@ -100,7 +116,7 @@ body {
 
 /* some short form */
 .pt-short .pt-item-sign {
-    font-size: 24px;
+    font-size: 20px;
 }
 .pt-short .pt-item-mass {
     text-align: center;
@@ -114,7 +130,7 @@ body {
 }
 
 /*****************************************************************************/
-/* short form                                                                */
+/* short form commons                                                        */
 /*****************************************************************************/
 
 .pt-short {
@@ -162,7 +178,7 @@ body {
 .pt-short .pt-item[data-group="18"] { left: 94.4444%; }
 
 /*****************************************************************************/
-/* compact form                                                              */
+/* compact form commons                                                      */
 /*****************************************************************************/
 
 /* layout */
@@ -176,18 +192,27 @@ body {
         .pt-table tr td {
             border: 1px #777 solid;
             overflow: hidden;
+            position: relative;
         }
+            .pt-table tr td > div {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+        
 
 .pt-table-1 {
-    height: 80%;
+    height: 82%;
 }
 
     .pt-table-1 col {
-        width: 8.8182%; /* (100-3)/11 */
+        width: 10%;
     }
 
     .pt-table-1 col:first-child {
-        width: 3%;
+        width: 2.2em;
     }
 
     .pt-table-1 tr  {
@@ -195,12 +220,12 @@ body {
     }
 
     .pt-table-1 tr:first-child {
-        height: 3%;
+        height: 1.7em;
     }
 
 .pt-table-2 {
-    margin-top: 1%;
-    height: 6.6%;
+    margin-top: 0.60%;
+    height: 8%;
 }
 
 
@@ -215,6 +240,12 @@ body {
     font-size: 20px;
 }
 
+.pt-row-caption > div,
+.pt-col-caption > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
 
