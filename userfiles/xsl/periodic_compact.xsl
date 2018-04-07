@@ -4,6 +4,7 @@
 <xsl:output method="html" encoding="utf-8" indent="yes" />
 
 <xsl:template match="table">
+
     <table class="pt-table pt-table-1">
 
         <colgroup>
@@ -210,7 +211,7 @@
         <!-- <xsl:apply-templates select="item" /> -->
 
 <xsl:template match="item">
-	<div class="pt-item" data-color="{color}">
+	<div class="pt-item" data-color="{color}" data-number="{number}">
         <div class="pt-item-sign">
             <xsl:value-of select="sign" />
         </div>

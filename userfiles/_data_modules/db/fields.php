@@ -164,6 +164,14 @@ CMS::$R['db_api_fields'] = array(
 		'caption'     => 'Плотность',
 		'width'       => 100,
 	),
+	'periodic_density_unit' => array(
+		'table'       => 'periodic',
+		'table_field' => 'density_unit',
+		'field'       => 'periodic_density_unit',
+		'type'        => J_DB::FIELD_TYPE_TEXT,
+		'caption'     => 'Единица плотности',
+		'width'       => 50,
+	),
 	'periodic_temp_melt' => array(
 		'table'       => 'periodic',
 		'table_field' => 'temp_melt',

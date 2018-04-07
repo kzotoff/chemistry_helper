@@ -4,7 +4,7 @@
 <xsl:output method="html" encoding="utf-8" indent="yes" />
 
 <xsl:template match="table">
-    <div class="pt-table pt-short">
+    <div class="pt-table">
         <xsl:apply-templates select="item" />
     </div>
 
@@ -12,7 +12,7 @@
 
 
 <xsl:template match="item">
-	<div class="pt-item" data-period="{period}" data-group="{group}" data-color="{color}">
+	<div class="pt-item" data-period="{period}" data-group="{group}" data-color="{color}" data-number="{number}">
 
         <xsl:if test="(period = 6) and (group = '')">
             <xsl:attribute name="data-group">

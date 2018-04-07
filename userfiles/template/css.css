@@ -40,6 +40,73 @@ body {
 }
 
 /*****************************************************************************/
+/* popup                                                                     */
+/*****************************************************************************/
+.popup-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-overlay.popup-visible {
+    display: flex;
+}
+
+.popup-popup {
+    min-width: 30%;
+    height: auto;
+    box-shadow: 0 0 38px 8px black;
+    padding: 1.5em;
+    max-width: 90%;
+    background-color: white;
+    position: relative;
+}
+
+.popup-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+.popup-close:hover {
+    background-color: #faa;
+}
+
+.popup-close:after,
+.popup-close:before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 4px;
+    background-color: #c00;
+    position: absolute;
+}
+
+.popup-close:after {
+    transform: rotate(45deg);
+    top: 15px;
+    left: 1px;
+}
+
+.popup-close:before {
+    transform: rotate(-45deg);
+    top: 15px;
+    left: 1px;
+}
+
+.popup-content {
+    width: 100%;
+    height: 100%;
+}
+/*****************************************************************************/
 /*****************************************************************************/
 /*                                                                           */
 /* PERIODIC TABLE                                                            */
@@ -54,7 +121,37 @@ body {
 }
 
 /*****************************************************************************/
-/* item                                                                      */
+/* element description                                                       */
+/*****************************************************************************/
+.element-info {
+    font-size: 24px;
+    width: 20em;
+}
+.element-info h3 {
+    text-align: center;
+    margin: 0;
+    font-size: 2.5em;
+}
+.element-info h5 {
+    text-align: center;
+    margin-top: 0;
+    font-size: 1.1em;
+    margin-bottom: 1em;
+}
+.element-info .el-info-item > div {
+    display: inline-block;
+}
+.element-info .el-info-item > div:nth-child(1) {
+    width: 69%;
+    text-align: right;
+    padding-right: 1em;
+}
+.element-info .el-info-item > div:nth-child(2) {
+    width: 30%;
+    font-weight: bold;
+}
+/*****************************************************************************/
+/* item (both forms)                                                         */
 /*****************************************************************************/
 
 .pt-item[data-color="cyan"] {
@@ -129,6 +226,8 @@ body {
     padding: 2px 0px;
 }
 
+
+
 /*****************************************************************************/
 /* short form commons                                                        */
 /*****************************************************************************/
@@ -136,7 +235,7 @@ body {
 .pt-short {
     position: relative;
     margin: auto;
-    width: 95%;
+    width: 100%;
     height: 90%;
 }
 
@@ -228,8 +327,7 @@ body {
     height: 8%;
 }
 
-
-/* styling */
+/* some compact form styling */
 
 .pt-row-caption {
     text-align: center;
@@ -246,10 +344,3 @@ body {
     align-items: center;
     justify-content: center;
 }
-
-
-
-
-
-
-

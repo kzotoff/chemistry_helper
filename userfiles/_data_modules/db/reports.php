@@ -109,6 +109,7 @@ CMS::$R['db_api_reports'] = array(
             '   `group`           = `pediodic_group`, '.
             '   `mass`            = `pediodic_mass`, '.
             '   `density`         = `pediodic_density`, '.
+            '   `density_unit`    = `pediodic_density_unit`, '.
             '   `temp_melt`       = `pediodic_temp_melt`, '.
             '   `temp_boil`       = `pediodic_temp_boil`, '.
             '   `discovered_year` = `pediodic_discovered_year`, '.
@@ -144,6 +145,7 @@ CMS::$R['db_api_reports'] = array(
             'periodic_group',
             'periodic_mass',
             'periodic_density',
+            'periodic_density_unit',
             'periodic_temp_melt',
             'periodic_temp_boil',
             'periodic_discovered_year',

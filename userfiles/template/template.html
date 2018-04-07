@@ -8,7 +8,9 @@
 </head>
 
 <script>
-    window.data.periodic = [macro type="user-function" function="generate_periodic_json" /]
+    window.data = {
+        periodic : [macro type="user-function" function="generate_periodic_json" /]
+    }
 </script>
 <body>
 
@@ -22,8 +24,14 @@
         [macro type="content" /]
     </div>
 
-    <div class="popup-overlay">
+</div>
+
+<div class="popup-overlay">
+    <div class="popup-popup">
+        <div class="popup-close">
+        </div>
         <div class="popup-content">
+            Have a nice DOS!
         </div>
     </div>
 </div>
