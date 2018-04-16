@@ -183,7 +183,11 @@ body {
 .pt-item {
     position: relative;
     height: 100%;
+    cursor: pointer;
 }
+    .pt-item:hover {
+        box-shadow: 0 0 20px 0px rgba(0,0,0,0.44) inset;
+    }
 
 .pt-item-sign {
     font-size: 3.4vh;
@@ -294,6 +298,11 @@ body {
 /*****************************************************************************/
 
 /* layout */
+.pt-compact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 .pt-table {
     width: 100%;
@@ -336,7 +345,6 @@ body {
     }
 
 .pt-table-2 {
-    margin-top: 0.60%;
     height: 8%;
 }
 

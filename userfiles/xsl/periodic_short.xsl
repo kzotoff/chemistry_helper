@@ -14,14 +14,14 @@
 <xsl:template match="item">
 	<div class="pt-item" data-period="{period}" data-group="{group}" data-color="{color}" data-number="{number}">
 
-        <xsl:if test="(period = 6) and (group = '')">
+        <xsl:if test="(period = 6) and (group = '3')">
             <xsl:attribute name="data-group">
                 <xsl:value-of select="number - 54" />
             </xsl:attribute>
             <xsl:attribute name="data-extra-row">1</xsl:attribute>
         </xsl:if>
 
-        <xsl:if test="(period = 7) and (group = '')">
+        <xsl:if test="(period = 7) and (group = '3')">
             <xsl:attribute name="data-group">
                 <xsl:value-of select="number - 86" />
             </xsl:attribute>
